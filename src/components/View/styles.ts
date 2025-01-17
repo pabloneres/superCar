@@ -5,4 +5,5 @@ export const ViewContainer = styled.View`
   margin-bottom: ${({ mb }: { mb: number }) => mb}px;
   margin-left: ${({ ml }: { ml: number }) => ml}px;
   margin-right: ${({ mr }: { mr: number }) => mr}px;
+  flex: ${({ flex }: { flex: number }) => flex};
 `;

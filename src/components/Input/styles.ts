@@ -13,6 +13,7 @@ export const InputContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-right: 10px;
   border-color: ${(props: { isActive: boolean; hasError: boolean }) =>
     props.isActive ? "green" : props.hasError ? "red" : "#ccc"};
 `;
@@ -20,7 +21,7 @@ export const InputContainer = styled.View`
 export const Input = styled.TextInput`
   padding-left: 10px;
   height: 50px;
-  width: 100%;
+  flex: 1;
 `;
 
 export const ErrorText = styled.Text`

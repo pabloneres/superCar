@@ -6,6 +6,7 @@ type ViewComponentProps = ViewProps & {
     mb?: number
     ml?: number
     mr?: number
+    flex?: number
 }
 
 export default function ViewComponent(props: ViewComponentProps) {

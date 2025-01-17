@@ -1,15 +1,17 @@
 import { Fragment } from "react";
 import { ButtonContainer, ButtonText } from "./styles";
-import { TouchableOpacityProps } from "react-native";
+import { ActivityIndicator, TouchableOpacityProps } from "react-native";
 
 type ButtonComponentProps = TouchableOpacityProps & {
     title: string
+    loading?: boolean
 }
 
-export default function ButtonComponent({ title, ...props }: ButtonComponentProps) {
+export default function ButtonComponent({ title, loading, ...props }: ButtonComponentProps) {
     return (
         <ButtonContainer {...props}>
-            <ButtonText>{title}</ButtonText>
+            {loading && (<ActivityIndicator color="#fff" />)}
+            {!loading && <ButtonText>{title}</ButtonText>}
         </ButtonContainer>
     )
 }
